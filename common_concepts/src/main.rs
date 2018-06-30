@@ -93,4 +93,18 @@ fn main() {
 
     println!("The value array element is: {}", element);
 
+    //
+    // ─── FUNCTIONS ──────────────────────────────────────────────────────────────────
+    //
+
+      println!("Return value of the function {}",  another_function(5));  
+}
+
+fn another_function(x: i32) -> i32 {
+    println!("The passed value is: {}", x);
+    {
+        let y = x + 2;
+        y * 2
+    }
+    
 }
