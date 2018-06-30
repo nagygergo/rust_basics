@@ -98,6 +98,57 @@ fn main() {
     //
 
       println!("Return value of the function {}",  another_function(5));  
+
+    //
+    // ─── CONTROL FLOW ───────────────────────────────────────────────────────────────
+    //
+
+    let test_number = 3;
+
+    //Basic if else
+    if test_number != 0 {
+        println!("number was something other than zero");
+    } else if test_number % 3 == 0 {
+        println!("number is divisible by 3");
+    }
+
+    //Conditional let statement
+    let conditional_number = if test_number != 0 {
+        5
+    } else {
+        0
+    };
+
+    println!("conditional_ number is: {}", conditional_number);
+
+    //Loop statement
+
+    let mut loop_variable = 0;
+
+    loop {
+        loop_variable = loop_variable + 1;
+        println!("loop variable: {}", loop_variable);
+        if loop_variable == 2 {
+            break;
+        }
+    }
+
+    //While statement
+
+    let mut while_variable = 0;
+
+    while while_variable < 5 {
+        println!("while variable: {}", while_variable);
+        while_variable = while_variable + 1;
+    }
+
+    let for_array = [10,20,30,40,50];
+
+    for array_element in for_array.iter() {
+        println!("array element: {}", array_element)
+    }
+
+    
 }
 
 fn another_function(x: i32) -> i32 {
